@@ -18,6 +18,7 @@ class CardNews extends HTMLElement{
 
         const linkTitle = document.createElement("a");
         linkTitle.textContent =  (this.getAttribute("title") || "Sem Post");
+        linkTitle.href = this.getAttribute("link=url");
         
         const newsContent = document.createElement("p"); 
         newsContent.textContent = (this.getAttribute("contet") || "Sem conteúdo");
@@ -28,7 +29,10 @@ class CardNews extends HTMLElement{
 
         const cardRight = document.createElement("div");
         cardRight.setAttribute("class", "card__right");
+
         const newsImage = document.createElement("img");
+        newsImage.src = (this.getAttribute("photo") || "https://www.arteparacaneca.com.br/arte-para-caneca/large/306/star-wars-jedi-darth-vader.jpg");
+        newsImage.alt = "Foto do vader";
         cardRight.appendChild(newsImage);
 
         componentRoot.appendChild(cardLeft);
