@@ -4,9 +4,13 @@
     box-sizing: border-box;
     font-family: "Segoe UI", sans-serif;
 }
-body {
+.container {
     display: flex;
     flex-direction: column;
-    align-content: center;
     align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    background-color: red!important;
+    overflow: hidden;
 }
+

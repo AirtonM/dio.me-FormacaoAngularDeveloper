@@ -45,7 +45,8 @@ class CardNews extends HTMLElement{
         const style = document.createElement("style");
         style.textContent = `
             .card {
-                width: 80%;
+                width: 100%;
+                max-width: 1200px;
                 box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
                 -webkit-box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
                 -moz-box-shadow: 9px 9px 27px 0px rgba(0,0,0,0.75);
@@ -59,6 +60,8 @@ class CardNews extends HTMLElement{
                 flex-direction: column;
                 justify-content: center;
                 padding-left: 10px;
+                width: 40%;
+                max-width: 500px;
             }
             .card__left > span {
                 font-weight: 400;
@@ -73,9 +76,34 @@ class CardNews extends HTMLElement{
             .card__left > p {
                 color: rgba(70,70,70);
             }
-            .card__right > img {
-                width: 600px!important;
-                heigth: 400px!important;
+            .card__right {
+                width: 60%;
+                max-width: 700px;
+                heigth: auto!important;
+                overflow: hidden;
+            }
+            .card__right > img{
+                width: 700px;
+            }
+            @media only screen and (max-width: 767px){
+                .card {
+                    display: flex;
+                    flex-direction: column !important;
+                    width: 100%!important;
+                    max-width: 100%!important;
+                }
+                .card__left {
+                    width: 100%!important;
+                    max-width: 100%!important;
+                }
+                .card__right {
+                    width: 100%!important;
+                    max-width: 100%!important;
+                }
+                .card__right > img {
+                    width: 100%!important;
+                    max-width: 100%!important;
+                }
             }
         `;
         return style;
