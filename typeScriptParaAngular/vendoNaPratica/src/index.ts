@@ -31,3 +31,10 @@ let meuProduto: ProdutoLoja = {
     preco: 59.86,
     disponivel: true,
 }
+
+/**
+ * Arrays
+ */
+let numeros : number[]=[1,2,3];
+// Array de número (todos os elementos devem ser do mesmo tipo)
+let numeros2 : Array<number> = [1,2,3];
