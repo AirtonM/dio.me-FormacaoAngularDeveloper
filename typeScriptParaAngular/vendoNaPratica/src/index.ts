@@ -11,3 +11,23 @@ let indefinido : undefined = undefined;
 // Tipos abragentes: any, void
 let retorno : void;
 let retornoView : any = false; // Aceita qualquer coisa
+
+// Objeto - sem previsibilidade
+let produto : object = {
+    descricao:"Mouse",
+    preco:30,
+    disponivel: true,
+}
+
+// Objeto tipado - com previsibilidade
+type ProdutoLoja = {
+    descricao: string;
+    preco: number;
+    disponivel: boolean;
+}
+
+let meuProduto: ProdutoLoja = {
+    descricao: 'Teclado',
+    preco: 59.86,
+    disponivel: true,
+}
