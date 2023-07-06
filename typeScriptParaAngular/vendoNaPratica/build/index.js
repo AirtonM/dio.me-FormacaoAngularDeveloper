@@ -41,3 +41,11 @@ let boleto = ["Agua", 119.2, 2546225874931560];
  */
 let anivessario = new Date("2022-12-01 05:00");
 console.log(anivessario.toString());
+/**
+ * Funções
+ */
+function addNumber(x, y) {
+    return x + y;
+}
+let soma = addNumber(4, 7);
+console.log("A soma é: " + soma);

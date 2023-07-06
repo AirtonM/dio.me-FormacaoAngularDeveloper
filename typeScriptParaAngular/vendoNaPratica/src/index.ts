@@ -56,3 +56,14 @@ let boleto: [string, number, number] = ["Agua", 119.2, 2546225874931560];
  */
 let anivessario : Date = new Date("2022-12-01 05:00");
 console.log(anivessario.toString());
+
+/**
+ * Funções
+ */
+function addNumber(x: number, y: number): number {
+    return x + y;
+}
+
+let soma: number = addNumber(4, 7);
+
+console.log("A soma é: " + soma);
