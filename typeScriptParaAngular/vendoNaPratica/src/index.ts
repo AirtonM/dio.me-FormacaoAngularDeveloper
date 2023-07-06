@@ -77,3 +77,10 @@ function CallToPhone(phone: number | string): number | string {
 
 console.log(CallToPhone(1213123123));
 console.log(CallToPhone("1213123123-2"));
+
+/**
+ * Funções Async
+ */
+async function getDatabase(id: number): Promise<string> {
+    return "Airton";
+}
