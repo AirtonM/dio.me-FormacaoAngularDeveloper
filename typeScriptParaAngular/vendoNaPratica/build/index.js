@@ -49,3 +49,11 @@ function addNumber(x, y) {
 }
 let soma = addNumber(4, 7);
 console.log("A soma é: " + soma);
+/**
+ * Funções Multi Tipos
+ */
+function CallToPhone(phone) {
+    return phone;
+}
+console.log(CallToPhone(1213123123));
+console.log(CallToPhone("1213123123-2"));

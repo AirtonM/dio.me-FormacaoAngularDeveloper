@@ -67,3 +67,13 @@ function addNumber(x: number, y: number): number {
 let soma: number = addNumber(4, 7);
 
 console.log("A soma é: " + soma);
+
+/**
+ * Funções Multi Tipos
+ */
+function CallToPhone(phone: number | string): number | string {
+    return phone;
+}
+
+console.log(CallToPhone(1213123123));
+console.log(CallToPhone("1213123123-2"));
