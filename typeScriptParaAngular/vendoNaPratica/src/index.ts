@@ -46,3 +46,13 @@ let infos: (string | number)[] = ["João", 1, "Maria", 3];
  * Tuplas
  */
 let boleto: [string, number, number] = ["Agua", 119.2, 2546225874931560];
+
+/**
+ * Arrays Métodos
+ */
+
+/**
+ * Datas
+ */
+let anivessario : Date = new Date("2022-12-01 05:00");
+console.log(anivessario.toString());
