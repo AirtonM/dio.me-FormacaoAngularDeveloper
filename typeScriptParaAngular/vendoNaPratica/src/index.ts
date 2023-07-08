@@ -108,3 +108,18 @@ const bot2: robot2 = {
 }
 console.log(bot1);
 console.log(bot2);
+
+ class Pessoas implements robot2 {
+    id: string | number;
+    name: string;
+
+    constructor(id: string | number , name: string){
+        this.id = id
+        this.name = name
+    }
+    sayHello(): string {
+        return "Olá";
+    }
+ }
+ const p = new Pessoas (1, "gustm");
+ console.log(p.sayHello);

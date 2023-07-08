@@ -84,3 +84,14 @@ const bot2 = {
 };
 console.log(bot1);
 console.log(bot2);
+class Pessoas {
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
+    sayHello() {
+        return "Olá";
+    }
+}
+const p = new Pessoas(1, "gustm");
+console.log(p.sayHello);
