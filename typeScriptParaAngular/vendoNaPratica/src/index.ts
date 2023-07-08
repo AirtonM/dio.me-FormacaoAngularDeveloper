@@ -84,3 +84,27 @@ console.log(CallToPhone("1213123123-2"));
 async function getDatabase(id: number): Promise<string> {
     return "Airton";
 }
+
+/**
+ * Interfaces
+ */
+type robot = {
+    readonly id: number | string;
+    name: string;
+};
+
+interface robot2 {
+    readonly id: number | string;
+    name: string;
+}
+
+const bot1: robot = {
+    id: 1,
+    name: "Megamam1",
+}
+const bot2: robot2 = {
+    id: 1,
+    name: "Megamam2",
+}
+console.log(bot1);
+console.log(bot2);
