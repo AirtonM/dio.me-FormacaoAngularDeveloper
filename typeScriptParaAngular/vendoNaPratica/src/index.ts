@@ -145,3 +145,28 @@ console.log(bot2);
 
  const p1 = new Character('Forte',10,98);
  console.log(p1);
+
+ /** 
+  * Data Modifiers
+  * public - Todos vê
+  * private - Só pode ser acessado dentro da classe
+  * protected - Classes e sub classes conseguem enchergar
+  */
+ class Character2 {
+    private name2: string;
+    protected stregth2: number;
+    skill2: number;
+
+    constructor(name: string, stregth: number, skill: number){
+        this.name2 = name;
+        this.stregth2 = stregth;
+        this.skill2 = skill;
+    }
+
+    atack(): void {
+        console.log(`Attack with ${this.stregth2} points`);
+    }
+ }
+
+ const p2 = new Character2('Forte',10,98);
+ console.log(p2); 
