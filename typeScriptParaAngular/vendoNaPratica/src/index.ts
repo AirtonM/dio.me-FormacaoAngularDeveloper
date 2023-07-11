@@ -123,3 +123,25 @@ console.log(bot2);
  }
  const p = new Pessoas (1, "gustm");
  console.log(p.sayHello);
+
+ /**
+  * classe
+  */
+ class Character {
+    name: string;
+    stregth: number;
+    skill: number;
+
+    constructor(name: string, stregth: number, skill: number){
+        this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
+    }
+
+    atack(): void {
+        console.log(`Attack with ${this.stregth} points`);
+    }
+ }
+
+ const p1 = new Character('Forte',10,98);
+ console.log(p1);
