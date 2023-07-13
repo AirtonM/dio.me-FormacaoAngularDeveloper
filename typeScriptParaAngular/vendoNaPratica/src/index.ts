@@ -153,8 +153,8 @@ console.log(bot2);
   * protected - Classes e sub classes conseguem enchergar
   */
  class Character2 {
-    private name2: string;
-    protected stregth2: number;
+    private name2?: string; // propriedade não é obrigatoria
+    readonly stregth2: number; // não da para cetar no lado de fora
     skill2: number;
 
     constructor(name: string, stregth: number, skill: number){
