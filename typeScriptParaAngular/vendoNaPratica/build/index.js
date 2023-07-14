@@ -1,97 +1,143 @@
 "use strict";
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-// tipos primitivos: boolean, number, string
-let ligado = false;
-let nome = "Airton";
-let idade = 24;
-let altura = 1.77;
-// Tipos Especiais: null ,undefined
-let nulo = null;
-let indefinido = undefined;
-// Tipos abragentes: any, void
-let retorno;
-let retornoView = false; // Aceita qualquer coisa
-// Objeto - sem previsibilidade
-let produto = {
-    descricao: "Mouse",
-    preco: 30,
-    disponivel: true,
-};
-let meuProduto = {
-    descricao: 'Teclado',
-    preco: 59.86,
-    disponivel: true,
-};
+// // tipos primitivos: boolean, number, string
+// let ligado : boolean = false;
+// let nome  : string = "Airton";
+// let idade : number = 24;
+// let altura : number = 1.77;
+// // Tipos Especiais: null ,undefined
+// let nulo : null = null;
+// let indefinido : undefined = undefined;
+// // Tipos abragentes: any, void
+// let retorno : void;
+// let retornoView : any = false; // Aceita qualquer coisa
+// // Objeto - sem previsibilidade
+// let produto : object = {
+//     descricao:"Mouse",
+//     preco:30,
+//     disponivel: true,
+// }
+// // Objeto tipado - com previsibilidade
+// type ProdutoLoja = {
+//     descricao: string;
+//     preco: number;
+//     disponivel: boolean;
+// }
+// let meuProduto: ProdutoLoja = {
+//     descricao: 'Teclado',
+//     preco: 59.86,
+//     disponivel: true,
+// }
+// /**
+//  * Arrays
+//  */
+// let numeros : number[]=[1,2,3];
+// // Array de número (todos os elementos devem ser do mesmo tipo)
+// let numeros2 : Array<number> = [1,2,3];
+// // Multi tipos
+// let infos: (string | number)[] = ["João", 1, "Maria", 3];
+// /**
+//  * Tuplas
+//  */
+// let boleto: [string, number, number] = ["Agua", 119.2, 2546225874931560];
+// /**
+//  * Arrays Métodos
+//  */
+// /**
+//  * Datas
+//  */
+// let anivessario : Date = new Date("2022-12-01 05:00");
+// console.log(anivessario.toString());
+// /**
+//  * Funções
+//  */
+// function addNumber(x: number, y: number): number {
+//     return x + y;
+// }
+// let soma: number = addNumber(4, 7);
+// console.log("A soma é: " + soma);
+// /**
+//  * Funções Multi Tipos
+//  */
+// function CallToPhone(phone: number | string): number | string {
+//     return phone;
+// }
+// console.log(CallToPhone(1213123123));
+// console.log(CallToPhone("1213123123-2"));
+// /**
+//  * Funções Async
+//  */
+// async function getDatabase(id: number): Promise<string> {
+//     return "Airton";
+// }
+// /**
+//  * Interfaces
+//  */
+// type robot = {
+//     readonly id: number | string;
+//     name: string;
+// };
+// interface robot2 {
+//     readonly id: number | string;
+//     name: string;
+// }
+// const bot1: robot = {
+//     id: 1,
+//     name: "Megamam1",
+// }
+// const bot2: robot2 = {
+//     id: 1,
+//     name: "Megamam2",
+// }
+// console.log(bot1);
+// console.log(bot2);
+//  class Pessoas implements robot2 {
+//     id: string | number;
+//     name: string;
+//     constructor(id: string | number , name: string){
+//         this.id = id
+//         this.name = name
+//     }
+//     sayHello(): string {
+//         return "Olá";
+//     }
+//  }
+//  const p = new Pessoas (1, "gustm");
+//  console.log(p.sayHello);
+//  /**
+//   * classe
+//   */
+//  class Character {
+//     name: string;
+//     stregth: number;
+//     skill: number;
+//     constructor(name: string, stregth: number, skill: number){
+//         this.name = name;
+//         this.stregth = stregth;
+//         this.skill = skill;
+//     }
+//     atack(): void {
+//         console.log(`Attack with ${this.stregth} points`);
+//     }
+//     // Magician: subclasses
+//  }
+//  class Magician extends Character {
+//     magicPoints: number;
+//     constructor(name: string, stregth: number, skill: number, magicPoints: number){
+//         super(name, stregth, skill);
+//         this.magicPoints = magicPoints;
+//     }
+// }
+//  const p1 = new Character('Forte',10,98);
+//  const p2 = new Magician('Mago',9,30,100);
+//  console.log(p1);
 /**
- * Arrays
+ * Generics
  */
-let numeros = [1, 2, 3];
-// Array de número (todos os elementos devem ser do mesmo tipo)
-let numeros2 = [1, 2, 3];
-// Multi tipos
-let infos = ["João", 1, "Maria", 3];
-/**
- * Tuplas
- */
-let boleto = ["Agua", 119.2, 2546225874931560];
-/**
- * Arrays Métodos
- */
-/**
- * Datas
- */
-let anivessario = new Date("2022-12-01 05:00");
-console.log(anivessario.toString());
-/**
- * Funções
- */
-function addNumber(x, y) {
-    return x + y;
+function concatArray(...itens) {
+    return new Array().concat(...itens);
 }
-let soma = addNumber(4, 7);
-console.log("A soma é: " + soma);
-/**
- * Funções Multi Tipos
- */
-function CallToPhone(phone) {
-    return phone;
-}
-console.log(CallToPhone(1213123123));
-console.log(CallToPhone("1213123123-2"));
-/**
- * Funções Async
- */
-function getDatabase(id) {
-    return __awaiter(this, void 0, void 0, function* () {
-        return "Airton";
-    });
-}
-const bot1 = {
-    id: 1,
-    name: "Megamam1",
-};
-const bot2 = {
-    id: 1,
-    name: "Megamam2",
-};
-console.log(bot1);
-console.log(bot2);
-class Pessoas {
-    constructor(id, name) {
-        this.id = id;
-        this.name = name;
-    }
-    sayHello() {
-        return "Olá";
-    }
-}
-const p = new Pessoas(1, "gustm");
-console.log(p.sayHello);
+const numArray = concatArray([1, 5], [3]);
+const stgArray = concatArray(["Goku", "Vedita"], ["Kakaroto"]);
+numArray.push("Naruto");
+console.log(numArray);
+console.log(stgArray);
