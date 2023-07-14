@@ -141,32 +141,16 @@ console.log(bot2);
     atack(): void {
         console.log(`Attack with ${this.stregth} points`);
     }
+    // Magician: subclasses
+    
  }
-
+ class Magician extends Character {
+    magicPoints: number;
+    constructor(name: string, stregth: number, skill: number, magicPoints: number){
+        super(name, stregth, skill);
+        this.magicPoints = magicPoints;
+    }
+}
  const p1 = new Character('Forte',10,98);
+ const p2 = new Magician('Mago',9,30,100);
  console.log(p1);
-
- /** 
-  * Data Modifiers
-  * public - Todos vê
-  * private - Só pode ser acessado dentro da classe
-  * protected - Classes e sub classes conseguem enchergar
-  */
- class Character2 {
-    private name2?: string; // propriedade não é obrigatoria
-    readonly stregth2: number; // não da para cetar no lado de fora
-    skill2: number;
-
-    constructor(name: string, stregth: number, skill: number){
-        this.name2 = name;
-        this.stregth2 = stregth;
-        this.skill2 = skill;
-    }
-
-    atack(): void {
-        console.log(`Attack with ${this.stregth2} points`);
-    }
- }
-
- const p2 = new Character2('Forte',10,98);
- console.log(p2); 
