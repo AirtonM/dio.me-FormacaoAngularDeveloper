@@ -158,15 +158,12 @@
 /**
  * Generics
  */
-function concatArray(...itens: any[]): any[]{
+function concatArray<T>(...itens: T[]): T[]{
     return new Array().concat(...itens);
 }
 
-const numArray = concatArray([1, 5], [3]);
-const stgArray = concatArray(["Goku", "Vedita"], ["Kakaroto"]);
-
-// Como está no tipo any na função concatArray, acaba que da para colocar string na minha const de numeros... Isso é um problema a ser resolvido
-numArray.push("Naruto");
+const numArray = concatArray<number[]>([1, 5], [3]);
+const stgArray = concatArray<string[]>(["Goku", "Vedita"], ["Kakaroto"]);
 
 console.log(numArray);
 console.log(stgArray);
