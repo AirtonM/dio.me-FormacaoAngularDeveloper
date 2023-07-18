@@ -155,15 +155,18 @@
 //  const p2 = new Magician('Mago',9,30,100);
 //  console.log(p1);
 
-/**
- * Generics
- */
-function concatArray<T>(...itens: T[]): T[]{
-    return new Array().concat(...itens);
-}
+// /**
+//  * Generics
+//  */
+// function concatArray<T>(...itens: T[]): T[]{
+//     return new Array().concat(...itens);
+// }
 
-const numArray = concatArray<number[]>([1, 5], [3]);
-const stgArray = concatArray<string[]>(["Goku", "Vedita"], ["Kakaroto"]);
+// const numArray = concatArray<number[]>([1, 5], [3]);
+// const stgArray = concatArray<string[]>(["Goku", "Vedita"], ["Kakaroto"]);
 
-console.log(numArray);
-console.log(stgArray);
+// console.log(numArray);
+// console.log(stgArray);
+
+let dado: string = "Vegita";
+console.log(dado);
